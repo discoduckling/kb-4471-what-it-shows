@@ -18,7 +18,7 @@ said otherwise. Their cause depends on the tenant (where they are, and which boo
 run), and `causeOf()` in `src/lib/kb/causes.ts` finds more than one.
 
 <Callout kind="warn">
-Engineering closed #4471 on 5 October. Parser: fixed (`fix(dates): parse dd/mm for eu locales`). Hint: won't fix, because the booking-v3 form was retired.
+Engineering closed #4471 on 5 October. Parser: fixed (<code>fix(dates): parse dd/mm for eu locales</code>). Hint: won't fix, because the booking-v3 form was retired.
 </Callout>
 
 ## What the table shows
