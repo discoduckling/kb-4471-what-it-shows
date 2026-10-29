@@ -1,6 +1,6 @@
 ---
 layout: runbook
-title: '#4471 · three problems, not one'
+title: '#4471 · two problems, not one'
 owner: support desk
 status: open
 reviewed: 2026-10-28
@@ -31,11 +31,9 @@ the cause on many reports, so do not triage on it.
 ## The problems
 
 1. **Parser.** The shared parser reads every date month first, and these tenants write the day
-   first. Most of #4471 is this. Ticket: [#1](https://github.com/discoduckling/kb-4471-what-it-shows/issues/1).
+   first. Most of #4471 is this, including a few reports the desk read as a move of one day (their own cause is not confirmed). Ticket: [#1](https://github.com/discoduckling/kb-4471-what-it-shows/issues/1).
 2. **Hint.** On booking-v3, the form tells day-first tenants to type `MM/DD/YYYY`, and they do.
    A parser fix does not change this. Ticket: [#2](https://github.com/discoduckling/kb-4471-what-it-shows/issues/2).
-3. **One day off.** The desk read a few reports as a move of one day, not a swap. The table
-   files them under `parser` by tenant. The cause is not confirmed. Ticket: [#3](https://github.com/discoduckling/kb-4471-what-it-shows/issues/3).
 
 ## Why it was merged
 

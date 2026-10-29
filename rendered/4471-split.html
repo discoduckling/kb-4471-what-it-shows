@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>#4471 · three problems, not one · support kb</title>
+<title>#4471 · two problems, not one · support kb</title>
 <style>
 :root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a66;--line:#e3e0d8;--accent:#2f6f5e;--warn:#b4501f;--warn-bg:#fbeee6;--note-bg:#eef5f2;--mono:ui-monospace,Menlo,monospace}
 @media(prefers-color-scheme:dark){:root{--bg:#171716;--fg:#ecebe6;--muted:#9c9a93;--line:#34332f;--accent:#6fbfa6;--warn:#f0905d;--warn-bg:#3a2418;--note-bg:#1d2c27}}
@@ -15,7 +15,7 @@ aside{border-left:4px solid var(--warn);padding:.5rem 1rem;margin:1rem 0;backgro
 .stamp{margin:2rem 0 0;font:.85rem var(--mono);color:var(--muted)}.stamp b{color:var(--accent);letter-spacing:.04em}
 footer{margin-top:3rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);padding-top:1rem}
 </style></head><body><div class="kb">
-<header><a class="crumb" href="#">support desk · kb</a><h1>#4471 · three problems, not one</h1>
+<header><a class="crumb" href="#">support desk · kb</a><h1>#4471 · two problems, not one</h1>
 <p class="meta"><span>owner <b>support desk</b></span><span class="status open">open</span><span>reviewed 2026-10-28</span></p></header>
 <main>
 <p><a href="#">#4471</a> says the dates bug is one issue with one fix queued. The reports say otherwise. Their cause depends on the tenant (where they are, and which booking form they run), and <code>causeOf()</code> in <code>src/lib/kb/causes.ts</code> finds more than one.</p>
@@ -29,9 +29,9 @@ footer{margin-top:3rem;color:var(--muted);font-size:.8rem;border-top:1px solid v
 <p>The <code>tagged as</code> column is what intake guessed from the reporter's browser. It disagrees with the cause on many reports, so do not triage on it.</p>
 <h2>The problems</h2>
 <ol>
-<li><strong>Parser.</strong> The shared parser reads every date month first, and these tenants write the day first. Most of #4471 is this. Ticket: <a href="https://github.com/discoduckling/kb-4471-what-it-shows/issues/1">#1</a>.</li>
+<li><strong>Parser.</strong> The shared parser reads every date month first, and these tenants write the day first. Most of #4471 is this, including a few reports the desk read as a move of one day (their own cause is not confirmed). Ticket: <a href="https://github.com/discoduckling/kb-4471-what-it-shows/issues/1">#1</a>.</li>
 <li><strong>Hint.</strong> On booking-v3, the form tells day-first tenants to type <code>MM/DD/YYYY</code>, and they do. A parser fix does not change this. Ticket: <a href="https://github.com/discoduckling/kb-4471-what-it-shows/issues/2">#2</a>.</li>
-<li><strong>One day off.</strong> The desk read a few reports as a move of one day, not a swap. The table files them under <code>parser</code> by tenant. The cause is not confirmed. Ticket: <a href="https://github.com/discoduckling/kb-4471-what-it-shows/issues/3">#3</a>.</li></ol>
+</ol>
 <h2>Why it was merged</h2>
 <p><a href="#">Decision 0001</a> merges on subject alone, and nobody reads the body. The subjects in this queue were all variants of "wrong day", so they matched. The rule works for one bug reported many times. It fails when one subject covers several bugs. A new decision record should replace 0001; this page does not edit it.</p>
 <h2>Lessons</h2>
