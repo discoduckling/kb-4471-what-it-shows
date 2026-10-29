@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 · two problems, not one'
 owner: support desk
-status: open
+status: resolved
 reviewed: 2026-10-28
 signature: v1.eyJzdWIiOiIxMjgwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyMzcyODEsImV4cCI6MTc5MzMyMzY4MX0.nSDleC56-tGk_mGoIZGbM5tXEtUGbbuh1iFTNOiBqno
 ---
@@ -13,12 +13,12 @@ signature: v1.eyJzdWIiOiIxMjgwIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYX
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
 </script>
 
-[#4471](/kb/incidents/4471) says the dates bug is one issue with one fix queued. The reports
-say otherwise. Their cause depends on the tenant (where they are, and which booking form they
+[#4471](/kb/incidents/4471) said the dates bug was one issue with one fix queued. The reports
+said otherwise. Their cause depends on the tenant (where they are, and which booking form they
 run), and `causeOf()` in `src/lib/kb/causes.ts` finds more than one.
 
 <Callout kind="warn">
-The fix queued for #4471 repairs the parser. It does not repair the other two problems below.
+Engineering closed #4471 on 5 October. Parser: fixed (`fix(dates): parse dd/mm for eu locales`). Hint: won't fix, because the booking-v3 form was retired.
 </Callout>
 
 ## What the table shows

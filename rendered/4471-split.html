@@ -16,10 +16,10 @@ aside{border-left:4px solid var(--warn);padding:.5rem 1rem;margin:1rem 0;backgro
 footer{margin-top:3rem;color:var(--muted);font-size:.8rem;border-top:1px solid var(--line);padding-top:1rem}
 </style></head><body><div class="kb">
 <header><a class="crumb" href="#">support desk · kb</a><h1>#4471 · two problems, not one</h1>
-<p class="meta"><span>owner <b>support desk</b></span><span class="status open">open</span><span>reviewed 2026-10-28</span></p></header>
+<p class="meta"><span>owner <b>support desk</b></span><span class="status resolved">resolved</span><span>reviewed 2026-10-28</span></p></header>
 <main>
 <p><a href="#">#4471</a> says the dates bug is one issue with one fix queued. The reports say otherwise. Their cause depends on the tenant (where they are, and which booking form they run), and <code>causeOf()</code> in <code>src/lib/kb/causes.ts</code> finds more than one.</p>
-<aside>The fix queued for #4471 repairs the parser. It does not repair the other two problems below.</aside>
+<aside>Engineering closed #4471 on 5 October. Parser: fixed (<code>fix(dates): parse dd/mm for eu locales</code>). Hint: won't fix, because the booking-v3 form was retired.</aside>
 <h2>What the table shows</h2>
 <p><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p>
 <table><thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr></thead><tbody>
