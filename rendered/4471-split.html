@@ -29,9 +29,9 @@ footer{margin-top:3rem;color:var(--muted);font-size:.8rem;border-top:1px solid v
 <p>The <code>tagged as</code> column is what intake guessed from the reporter's browser. It disagrees with the cause on many reports, so do not triage on it.</p>
 <h2>The problems</h2>
 <ol>
-<li><strong>Parser.</strong> The shared parser reads every date month first, and these tenants write the day first. Most of #4471 is this. Ticket: ISSUE_PARSER.</li>
-<li><strong>Hint.</strong> On booking-v3, the form tells day-first tenants to type <code>MM/DD/YYYY</code>, and they do. A parser fix does not change this. Ticket: ISSUE_HINT.</li>
-<li><strong>One day off.</strong> The desk read a few reports as a move of one day, not a swap. The table files them under <code>parser</code> by tenant. The cause is not confirmed. Ticket: ISSUE_ONEDAY.</li></ol>
+<li><strong>Parser.</strong> The shared parser reads every date month first, and these tenants write the day first. Most of #4471 is this. Ticket: <a href="https://github.com/discoduckling/kb-4471-what-it-shows/issues/1">#1</a>.</li>
+<li><strong>Hint.</strong> On booking-v3, the form tells day-first tenants to type <code>MM/DD/YYYY</code>, and they do. A parser fix does not change this. Ticket: <a href="https://github.com/discoduckling/kb-4471-what-it-shows/issues/2">#2</a>.</li>
+<li><strong>One day off.</strong> The desk read a few reports as a move of one day, not a swap. The table files them under <code>parser</code> by tenant. The cause is not confirmed. Ticket: <a href="https://github.com/discoduckling/kb-4471-what-it-shows/issues/3">#3</a>.</li></ol>
 <h2>Why it was merged</h2>
 <p><a href="#">Decision 0001</a> merges on subject alone, and nobody reads the body. The subjects in this queue were all variants of "wrong day", so they matched. The rule works for one bug reported many times. It fails when one subject covers several bugs. A new decision record should replace 0001; this page does not edit it.</p>
 <h2>Lessons</h2>
